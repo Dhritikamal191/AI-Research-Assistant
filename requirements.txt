@@ -1,0 +1,13 @@
+streamlit
+langchain
+langchain-community
+faiss-cpu
+sentence-transformers
+pymupdf
+pypdf
+python-dotenv
+pandas
+numpy
+PyYAML
+tqdm
+groq
