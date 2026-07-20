@@ -28,7 +28,7 @@ def show_chatbot():
 
             response = ""
 
-            for token in rag_stream(question):
+            for token in rag_query(question):
 
                 response += token
 
