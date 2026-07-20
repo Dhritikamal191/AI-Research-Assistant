@@ -10,6 +10,7 @@ from api_models import (QuestionRequest,SummaryRequest)
 from src.rag_pipeline import rag_query
 from src.summarizer import summarize_document
 from src.fastapi_upload import save_uploaded_file
+from src.utils import ensure_directories
 from src.pdf_loader import load_pdfs
 from src.chunker import split_documents
 from src.vector_db import create_vector_db
