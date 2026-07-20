@@ -11,3 +11,4 @@ numpy
 PyYAML
 tqdm
 groq
+plotly
