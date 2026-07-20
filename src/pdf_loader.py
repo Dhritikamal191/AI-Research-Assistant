@@ -22,18 +22,12 @@ def load_pdfs(upload_folder="data/uploads"):
 
     documents = []
 
-    if not os.path.exists(upload_folder):
-        raise FileNotFoundError(
-            f"{upload_folder} does not exist."
-        )
+    os.makedirs(upload_folder, exist_ok=True)
 
-    pdf_files = [
-        f for f in os.listdir(upload_folder)
-        if f.lower().endswith(".pdf")
-    ]
+    pdf_files = [f for f in os.listdir(upload_folder) if f.endswith(".pdf")]
 
-    if len(pdf_files) == 0:
-        raise ValueError("No PDF files found.")
+    if not pdf_files:
+       return []
 
     for pdf in pdf_files:
 
