@@ -33,6 +33,10 @@ def show_upload():
 
             docs = load_pdfs()
 
+            if not docs:
+                   st.warning("Please upload and save at least one PDF before building the knowledge base.")
+                   st.stop()
+
             chunks = split_documents(docs)
 
             create_vector_db(chunks)
