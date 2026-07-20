@@ -26,15 +26,10 @@ def show_chatbot():
 
             placeholder = st.empty()
 
-            response = ""
-
-            for token in rag_query(question):
-
-                response += token
-
+            placeholder.markdown (result["answer"])
                 placeholder.markdown(response)
 
-            st.markdown("### Sources")
+            st.markdown(result["answer"])
 
             for source in result["sources"]:
 
