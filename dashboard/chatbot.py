@@ -26,8 +26,7 @@ def show_chatbot():
 
             placeholder = st.empty()
 
-            placeholder.markdown (result["answer"])
-                placeholder.markdown(response)
+            placeholder.markdown (result["answer"])                
 
             st.markdown(result["answer"])
 
