@@ -17,7 +17,7 @@ def show_upload():
 
     if uploaded is not None:
 
-        if st.button("Save PDFs, type="primary"):
+        if st.button("Save PDFs", type="primary"):
 
             for pdf in uploaded:
 
