@@ -119,7 +119,7 @@ AI-Research-Assistant/
 
 ### ⚙ Installation
 
-git clone https://github.com/yourusername/AI-Research-Assistant.git
+git clone https://github.com/Dhritikamal191/AI-Research-Assistant.git
 
 cd AI-Research-Assistant
 
