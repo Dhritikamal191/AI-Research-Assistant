@@ -157,23 +157,23 @@ uvicorn api:app --reload
 
 ### 📖 How It Works
 
-Upload one or more PDF files.
+- Upload one or more PDF files.
 
-Extract text using PyMuPDF.
+- Extract text using PyMuPDF.
 
-Apply OCR for scanned pages.
+- Apply OCR for scanned pages.
 
-Split text into chunks.
+- Split text into chunks.
 
-Generate embeddings.
+- Generate embeddings.
 
-Store vectors in FAISS.
+- Store vectors in FAISS.
 
-Retrieve relevant chunks using Hybrid Search.
+- Retrieve relevant chunks using Hybrid Search.
 
-Generate answers with Llama 3.
+- Generate answers with Llama 3.
 
-Display document citations.
+- Display document citations.
 
 ### 📊 Key Features
 
