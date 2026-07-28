@@ -30,7 +30,7 @@ AI-powered Research Assistant using
             if f.endswith(".pdf")
         ])
 
-    history = len(memory.get_history())
+    history = len(conversation_memory.get_history())
 
     chunks = 0
 
