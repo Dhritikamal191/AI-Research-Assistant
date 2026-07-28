@@ -17,9 +17,16 @@ def show_chatbot():
 
         result = rag_query(question)
 
-        conversation_memory.add(
-            question,
-            result["answer"]
+        conversation_memory.add_message(
+        "default",
+        "user",
+        question
+        )
+
+        conversation_memory.add_message(
+        "default",
+        "assistant",
+        result["answer"]
         )
 
         st.session_state["last_question"] = question
