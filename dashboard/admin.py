@@ -9,7 +9,7 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-from src.memory import memory
+from src.memory import conversation_memory
 
 
 def show_admin():
