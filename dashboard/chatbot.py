@@ -17,7 +17,7 @@ def show_chatbot():
 
         result = rag_query(question)
 
-        memory.add(
+        conversation_memory.add(
             question,
             result["answer"]
         )
