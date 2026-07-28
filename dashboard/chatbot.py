@@ -1,6 +1,6 @@
 import streamlit as st
 from src.rag_pipeline import rag_query
-from src.memory import memory
+from src.memory import conversation_memory 
 from monitoring.logger import log_feedback
 
 def show_chatbot():
