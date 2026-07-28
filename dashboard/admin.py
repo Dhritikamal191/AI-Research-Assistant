@@ -31,7 +31,7 @@ def show_admin():
             if f.endswith(".pdf")
         ])
 
-    question_count = len(memory.get_history())
+    question_count = len(conversation_memory.get_history("default"))
 
     vector_status = "Available" if os.path.exists(
         "vectorstore/faiss_index/index.faiss"
