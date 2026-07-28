@@ -10,7 +10,7 @@ def show_analytics():
 
     st.metric(
         "Questions Asked",
-        len(memory.get_history())
+        len (conversation_memory.get_history("default"))
     )
 
     st.metric(
