@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 
-from src.memory import memory
+from src.memory import conversation_memory
 
 
 def show_home():
