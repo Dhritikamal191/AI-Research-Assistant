@@ -1,0 +1,3 @@
+TOP_K = 5
+MAX_HISTORY = 5
+CACHE_ENABLED = True
