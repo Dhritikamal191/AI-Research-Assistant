@@ -33,7 +33,7 @@ def show_settings():
 
     if st.button("Clear Chat"):
 
-        memory.clear()
+        conversation_memory.clear()
 
         st.success("Chat Cleared")
 
