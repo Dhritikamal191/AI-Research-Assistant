@@ -193,7 +193,7 @@ def rag_query(question, k=TOP_K, session_id="default"):
     except Exception as e:
            logger.exception("RAG pipeline failed")
 
-        return {
+    return {
             "answer": "Please upload a document before asking questions.",
             "sources": [],
             "context": "",
