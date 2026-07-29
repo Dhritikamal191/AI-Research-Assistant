@@ -226,7 +226,7 @@ def show_admin():
 
         if st.button("Clear Chat"):
 
-            memory.clear()
+            conversation_memory.clear ("default")
 
             st.success("Conversation Cleared")
 
