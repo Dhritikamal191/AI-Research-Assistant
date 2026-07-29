@@ -193,23 +193,13 @@ def rag_query(question, k=TOP_K, session_id="default"):
     except Exception as e:
            logger.exception("RAG pipeline failed")
 
-    return {
-
-        "answer": "Sorry, something went wrong while processing your request.",
-
-        "sources": [],
-
-        "context": "",
-
-        "answer": answer,
-
-        "sources": sources,
-
-        "retrieved_chunks": retrieved_docs
-
-        }
+        return {
+            "answer": "Please upload a document before asking questions.",
+            "sources": [],
+            "context": "",
+            "retrieved_chunks": []
+            }
     
-
 def rag_stream(question):
 
     retrieved_docs = retrieve_documents(question)
