@@ -169,6 +169,43 @@ AI-Research-Assistant/
 ├── data/uploads/
 └── chat_history/
 
+### Workflow
+
+- Upload PDF(s)
+- Extract text
+- Split into chunks
+- Generate embeddings
+- Store embeddings in FAISS
+- BM25 indexes keywords
+- User asks a question
+- Query Expansion improves the query
+- FAISS + BM25 retrieve candidate chunks
+- CrossEncoder reranks results
+- Top context sent to Llama 3
+- Answer returned with sources
+- Conversation stored in memory
+- Interaction logged
+- Feedback stored
+- Evaluation metrics generated
+
+### Evaluation
+
+- Context Precision
+- Context Recall
+- Faithfulness
+- Answer Relevancy
+- Response Time
+- Retrieval Accuracy
+
+### Monitoring
+
+- Interaction logging
+- Response latency
+- Error logging
+- Feedback collection
+- Cached responses
+-Performance statistics
+
 ### ⚙ Installation
 
 git clone https://github.com/Dhritikamal191/AI-Research-Assistant.git
