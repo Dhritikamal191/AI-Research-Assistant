@@ -118,7 +118,7 @@ Answer + Sources
                   ▼
          Hybrid Search Engine
         ┌────────────┴─────────────┐
-        ▼                             ▼
+        ▼                              ▼
      FAISS Search             BM25 Search
         └────────────┬─────────────┘
                       ▼
