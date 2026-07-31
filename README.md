@@ -74,28 +74,28 @@ Answer + Sources
 |   Category       |    Technologies        |
 |                  |                        |        
 |  Language        |      Python 3.12       |
-| ---------------- | ---------------------- |        
+|                  |                        |        
 |    LLM           |  Llama 3 via Groq API  |
-| ---------------- | ---------------------- |
+|                  |                        |
 |  Framework       |   FastAPI, Streamlit   |
-| ---------------- | ---------------------- |                        
+|                  |                        |                        
 |    RAG           |      LangChain         |
-| ---------------- | ---------------------- |
+|                  |                        |
 |  Embeddings      |  HuggingFace Sentence  |
 |                  |     Transformers       |
-| ---------------- | ---------------------- |
+|                  |                        |
 |  Vector DB       |        FAISS           |
-| ---------------- | ---------------------- |
+|                  |                        |
 | Keyword Search   |        BM25            |
-| ---------------- | ---------------------- |
+|                  |                        |
 |  Reranker        |     CrossEncoder       |
-| ---------------- | ---------------------- |
+|                  |                        |
 | Document Parsing |       PyMuPDF          |
-| ---------------- | ---------------------- |
+|                  |                        |
 |  Monitoring      |     Logging + CSV      |
-| ---------------- | ---------------------- |
+|                  |                        |
 |  Deployment      |  Docker,Render,Railway |
-| ---------------- | ---------------------- |
+|                  |                        |
 | Version Control  |     Git & GitHub       |
                   
 
