@@ -72,7 +72,7 @@ Answer + Sources
 ### 🛠 Tech Stack
 
 |   Category       |    Technologies        |
-|==================|========================|        
+| ---------------- | ---------------------- |        
 |  Language        |      Python 3.12       |
 |                  |                        |
 |    LLM           |  Llama 3 via Groq API  |
