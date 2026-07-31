@@ -1,5 +1,12 @@
 ### 📚 AI Research Assistant (RAG + OCR + FastAPI + Streamlit)
 
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi)
+![Streamlit](https://img.shields.io/badge/Streamlit-Frontend-FF4B4B?style=for-the-badge&logo=streamlit)
+![LangChain](https://img.shields.io/badge/LangChain-RAG-success?style=for-the-badge)
+![FAISS](https://img.shields.io/badge/FAISS-VectorDB-orange?style=for-the-badge)
+![Docker](https://img.shields.io/badge/Docker-Container-blue?style=for-the-badge&logo=docker)
+
 An end-to-end Retrieval-Augmented Generation (RAG) application that allows users to upload PDF documents, build a searchable knowledge base, and ask questions in natural language using Large Language Models (LLMs). The system combines semantic search, keyword search, OCR, conversation memory, and citation-based responses.
 
 🚀 Live Demo
