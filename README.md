@@ -118,10 +118,10 @@ Answer + Sources
                   ▼
          Hybrid Search Engine
         ┌────────────┴─────────────┐
-        ▼                          ▼
+        ▼                             ▼
      FAISS Search             BM25 Search
         └────────────┬─────────────┘
-                     ▼
+                      ▼
           CrossEncoder Reranker
                      ▼
           Relevant Context Chunks
