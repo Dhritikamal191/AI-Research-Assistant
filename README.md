@@ -122,15 +122,15 @@ Answer + Sources
      FAISS Search             BM25 Search
         └────────────┬─────────────┘
                       ▼
-          CrossEncoder Reranker
-                     ▼
-          Relevant Context Chunks
-                     ▼
-          Llama 3 (Groq API)
-                     ▼
-             Generated Answer
-                     ▼
-      Monitoring • Logging • Feedback                 
+            CrossEncoder Reranker
+                      ▼
+           Relevant Context Chunks
+                      ▼
+              Llama 3 (Groq API)
+                      ▼
+                Generated Answer
+                      ▼
+        Monitoring • Logging • Feedback                 
      
 ### 📂 Project Folder Structure
 AI-Research-Assistant/
