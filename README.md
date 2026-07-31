@@ -97,7 +97,7 @@ Answer + Sources
 |  Deployment      |  Docker,Render,Railway |
 | ---------------- | ---------------------- |
 | Version Control  |     Git & GitHub       |
-| ---------------- | ---------------------- |
+                  
 
 ### 📂 Project Structure
 AI-Research-Assistant/
