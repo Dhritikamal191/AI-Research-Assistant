@@ -99,7 +99,40 @@ Answer + Sources
 | Version Control  |     Git & GitHub       |
  
 
-### 📂 Project Structure
+### Project Structure 
+
+                 User
+                  │
+                  ▼
+          Streamlit Frontend
+                  │
+                  ▼
+            FastAPI Backend
+                  │
+                  ▼
+          Conversation Memory
+                  │
+                  ▼
+           Query Expansion
+                  │
+                  ▼
+         Hybrid Search Engine
+       ┌─────────┴──────────┐
+       ▼                      ▼
+ FAISS Search             BM25 Search
+       └─────────┬──────────┘
+                  ▼
+          CrossEncoder Reranker
+                  ▼
+         Relevant Context Chunks
+                  ▼
+           Llama 3 (Groq API)
+                  ▼
+            Generated Answer
+                  ▼
+      Monitoring • Logging • Feedback
+     
+### 📂 Project Folder Structure
 AI-Research-Assistant/
 │
 ├── app.py
