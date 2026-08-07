@@ -115,16 +115,7 @@ def rag_query(question, k=TOP_K, session_id="default"):
               "answer": "No relevant documents found.",
               "sources": []
              }
-
-        # Rerank hybrid-search results
-        reranker = ReRanker()
-
-        retrieved_docs = reranker.rerank(
-        query=question,
-        docs=candidate_docs,
-        top_k=k
-        )
-
+        
         # Build Context
         context = format_context(retrieved_docs)
 
@@ -188,17 +179,21 @@ def rag_query(question, k=TOP_K, session_id="default"):
             response_time=response_time
         )
 
-        response_cache.set(question, answer)
+        result = {
+    "answer": answer,
+    "sources": sources,
+    "context": context,
+    "retrieved_chunks": len(retrieved_docs)
+    }
+
+        response_cache.set(question, result)
+
+        return result
 
     except Exception as e:
            logger.exception("RAG pipeline failed")
 
-    return {
-            "answer": "Please upload a document before asking questions.",
-            "sources": [],
-            "context": "",
-            "retrieved_chunks": []
-            }
+           raise
     
 def rag_stream(question):
 
