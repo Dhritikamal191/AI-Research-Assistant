@@ -111,11 +111,25 @@ def rag_query(question, k=TOP_K, session_id="default"):
         retrieved_docs = unique_docs
 
         if len(candidate_docs) == 0:
+
+           prompt = f"""
+        You are a helpful AI assistant.
+
+        The uploaded documents do not contain information relevant to the user's question.
+
+        Answer the following question using your general knowledge.
+
+        Question:
+        {question}
+        """
+
+           answer = generate_response(prompt)
+
            return {
-              "answer": "No relevant documents found.",
+              "answer": answer,
               "sources": []
-             }
-        
+            }
+                  
         # Build Context
         context = format_context(retrieved_docs)
 
