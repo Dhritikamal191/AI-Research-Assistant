@@ -10,7 +10,7 @@ from monitoring.logger import log_interaction
 from src.prompt import build_prompt
 from src.llm import generate_response
 from src.hybrid_search import HybridRetriever
-from src.reranker import ReRanker
+
 from src.memory import conversation_memory
 from src.query_expansion import expand_query
 from config import TOP_K
