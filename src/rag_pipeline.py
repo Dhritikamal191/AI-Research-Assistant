@@ -127,7 +127,9 @@ def rag_query(question, k=TOP_K, session_id="default"):
 
            return {
               "answer": answer,
-              "sources": []
+              "sources": [],
+              "context": "",
+              "retrieved_chunks": 0
             }
                   
         # Build Context
