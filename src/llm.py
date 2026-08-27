@@ -5,7 +5,7 @@ LLM wrapper for the AI Research Assistant.
 
 Uses:
 - Groq API
-- Llama 3.3 70B Versatile
+- OpenAI GPT-OSS 120B
 """
 
 import os
@@ -30,11 +30,16 @@ client = Groq(
     api_key=API_KEY
 ) if API_KEY else None
 
+models = client.models.list()
+
+for model in models.data:
+    print(model.id)
+
 # ============================================================
 # MODEL CONFIGURATION
 # ============================================================
 
-MODEL_NAME = "llama-3.3-70b-versatile"
+MODEL_NAME = "openai/gpt-oss-120b"
 
 DEFAULT_TEMPERATURE = 0.3
 
