@@ -30,11 +30,6 @@ client = Groq(
     api_key=API_KEY
 ) if API_KEY else None
 
-models = client.models.list()
-
-for model in models.data:
-    print(model.id)
-
 # ============================================================
 # MODEL CONFIGURATION
 # ============================================================
