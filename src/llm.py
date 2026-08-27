@@ -22,21 +22,13 @@ load_dotenv()
 
 API_KEY = os.getenv("GROQ_API_KEY")
 
-if not API_KEY:
-    raise ValueError(
-        "GROQ_API_KEY is not set. "
-        "Please add it to your .env file or deployment environment."
-    )
-
-
 # ============================================================
 # GROQ CLIENT
 # ============================================================
 
 client = Groq(
     api_key=API_KEY
-)
-
+) if API_KEY else None
 
 # ============================================================
 # MODEL CONFIGURATION
@@ -261,25 +253,22 @@ def generate_response(
     max_tokens: int = DEFAULT_MAX_TOKENS
 ) -> str:
 
-    allowed, message = validate_user_prompt(
-        prompt
-    )
+    allowed, message = validate_user_prompt(prompt)
 
     if not allowed:
         return message
 
+    if client is None:
+        return (
+            "LLM Error: GROQ_API_KEY is not configured."
+        )
+
     try:
 
         response = client.chat.completions.create(
-
             model=MODEL_NAME,
-
-            messages=build_messages(
-                prompt
-            ),
-
+            messages=build_messages(prompt),
             temperature=temperature,
-
             max_tokens=max_tokens
         )
 
@@ -307,30 +296,23 @@ def stream_response(
     max_tokens: int = DEFAULT_MAX_TOKENS
 ):
 
-    allowed, message = validate_user_prompt(
-        prompt
-    )
+    allowed, message = validate_user_prompt(prompt)
 
     if not allowed:
-
         yield message
+        return
 
+    if client is None:
+        yield "LLM Error: GROQ_API_KEY is not configured."
         return
 
     try:
 
         stream = client.chat.completions.create(
-
             model=MODEL_NAME,
-
-            messages=build_messages(
-                prompt
-            ),
-
+            messages=build_messages(prompt),
             temperature=temperature,
-
             max_tokens=max_tokens,
-
             stream=True
         )
 
